@@ -1,16 +1,15 @@
+import java.util.ArrayList;
 
 public class Schedule {
-
-	private String a;
-	private String b;
-	private String c;
-	private String d;
-	private String e;
-	private String f;
-	private String g;
-	private String h;
-	
-	public Schedule(String a, String b, String c, String d, String e, String f, String g, String h) {
+	Class a;
+	Class b;
+	Class c;
+	Class d;
+	Class e;
+	Class f;
+	Class g;
+	Class h;
+	public Schedule(Class a, Class b, Class c, Class d, Class e, Class f, Class g, Class h) {
 		super();
 		this.a = a;
 		this.b = b;
@@ -21,73 +20,121 @@ public class Schedule {
 		this.g = g;
 		this.h = h;
 	}
-	public String toString() {
-		return " A:\t" + a + "B:\t" + b + "C:\t" + c + "D:\t" + d + "E:\t" + e + "F:\t" + f + "G:\t" + g + "H:\t" + h; 
+	
+	public Schedule() {
+		a=null;
+		b=null;
+		c=null;
+		d=null;
+		e=null;
+		f=null;
+		g=null;
+		h=null;
 	}
 
-	public String getA() {
+	public Class getA() {
 		return a;
 	}
 
-	public void setA(String a) {
+	public void setA(Class a) {
 		this.a = a;
 	}
 
-	public String getB() {
+	public Class getB() {
 		return b;
 	}
 
-	public void setB(String b) {
+	public void setB(Class b) {
 		this.b = b;
 	}
 
-	public String getC() {
+	public Class getC() {
 		return c;
 	}
 
-	public void setC(String c) {
+	public void setC(Class c) {
 		this.c = c;
 	}
 
-	public String getD() {
+	public Class getD() {
 		return d;
 	}
 
-	public void setD(String d) {
+	public void setD(Class d) {
 		this.d = d;
 	}
 
-	public String getE() {
+	public Class getE() {
 		return e;
 	}
 
-	public void setE(String e) {
+	public void setE(Class e) {
 		this.e = e;
 	}
 
-	public String getF() {
+	public Class getF() {
 		return f;
 	}
 
-	public void setF(String f) {
+	public void setF(Class f) {
 		this.f = f;
 	}
 
-	public String getG() {
+	public Class getG() {
 		return g;
 	}
 
-	public void setG(String g) {
+	public void setG(Class g) {
 		this.g = g;
 	}
 
-	public String getH() {
+	public Class getH() {
 		return h;
 	}
 
-	public void setH(String h) {
+	public void setH(Class h) {
 		this.h = h;
 	}
 	
-
+	public void printSchedule() {
+		ArrayList<String> className = new ArrayList<String>();
+		if(a==null)
+			className.add("empty");
+		else
+			className.add(a.getName());
+		if(b==null)
+			className.add("empty");
+		else
+			className.add(b.getName());
+		if(c==null)
+			className.add("empty");
+		else
+			className.add(c.getName());
+		if(d==null)
+			className.add("empty");
+		else
+			className.add(d.getName());
+		if(e==null)
+			className.add("empty");
+		else
+			className.add(e.getName());
+		if(f==null)
+			className.add("empty");
+		else
+			className.add(f.getName());
+		if(g==null)
+			className.add("empty");
+		else
+			className.add(g.getName());
+		if(h==null)
+			className.add("empty");
+		else
+			className.add(h.getName());
+		
+		for(int i=0;i<className.size();i++)
+			System.out.println(className.get(i));
+		
+		
+	}
+	
 }
